@@ -24,29 +24,11 @@ void setup() {
   pinMode(D3, OUTPUT);  
   pinMode(D4, OUTPUT);  
 }
-void first(){
-  digitalWrite(D1, l);
-  digitalWrite(D2, h);
-  digitalWrite(D3, h);
-  digitalWrite(D4, h); 
-}
-void second(){
-  digitalWrite(D1, h);
-  digitalWrite(D2, l);
-  digitalWrite(D3, h);
-  digitalWrite(D4, h); 
-}
-void third(){
-  digitalWrite(D1, h);
-  digitalWrite(D2, h);
-  digitalWrite(D3, l);
-  digitalWrite(D4, h); 
-}
-void fourth(){
-  digitalWrite(D1, h);
-  digitalWrite(D2, h);
-  digitalWrite(D3, h);
-  digitalWrite(D4, l); 
+void serial(a,b,c,d){
+  digitalWrite(D1, a);
+  digitalWrite(D2, b);
+  digitalWrite(D3, c);
+  digitalWrite(D4, d); 
 }
 void zero(){
   digitalWrite(pinA, h);   
@@ -139,7 +121,7 @@ void nine(){
   digitalWrite(pinG, h);
 }
 void loop() {
-  fourth();
+  serial(h,h,h,l);
   zero();
   delay(1000);
   one();
